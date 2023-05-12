@@ -1,5 +1,5 @@
 package com.fundamentosplatzi.springboot.fundamentos.bean;
 
-public interface MyBeanWithDependecy {
+public interface MyBeanWithDependency {
     void printWithDependency();
 }
