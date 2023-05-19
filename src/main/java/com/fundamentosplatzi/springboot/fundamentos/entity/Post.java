@@ -14,14 +14,14 @@ public class Post {
     private String description;
 
     @ManyToOne
-    private String user;
+    private String users;
 
     public Post() {
     }
 
-    public Post(Long id, String description, String user) {
+    public Post(Long id, String description, String users) {
         this.description = description;
-        this.user = user;
+        this.users = users;
     }
 
     public Long getId() {
@@ -41,11 +41,11 @@ public class Post {
     }
 
     public String getUser() {
-        return user;
+        return users;
     }
 
     public void setUser(String user) {
-        this.user = user;
+        this.users = user;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class Post {
         return "Post{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
-                ", user='" + user + '\'' +
+                ", user='" + users + '\'' +
                 '}';
     }
 }

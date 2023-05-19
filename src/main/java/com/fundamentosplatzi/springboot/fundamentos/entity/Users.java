@@ -1,7 +1,6 @@
 package com.fundamentosplatzi.springboot.fundamentos.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.sun.jdi.ArrayReference;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -9,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "users")
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_user", nullable = false, unique = true)
@@ -29,10 +28,10 @@ public class User {
     @JsonManagedReference
     private List<Post> post = new ArrayList<>();
 
-    public User() {
+    public Users() {
     }
 
-    public User(String name, String email, LocalDate birthDate, List<Post> post) {
+    public Users(String name, String email, LocalDate birthDate) {
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
